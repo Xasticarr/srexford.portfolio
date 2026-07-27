@@ -1,1 +1,1 @@
-# seanrexford.github.io
+Sean Rexford portfolio
