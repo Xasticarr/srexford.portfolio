@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sean Rexford — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+            href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="crt"></div>
+
+<header>
+    <nav>
+        <div class="brand">SEAN REXFORD<span class="cursor-blink"></span></div>
+        <div class="navlinks">
+            <a href="#work">[ WORK ]</a>
+            <a href="#about">[ ABOUT ]</a>
+            <a href="#contact">[ CONTACT ]</a>
+        </div>
+    </nav>
+</header>
+
+<main class="wrap">
+    <section class="hero">
+        <div class="hero-eyebrow">
+            <span class="dot"></span>FILE 01 — NEW GAME
+        </div>
+        <h1 class="hero-title">
+            An ongoing archive<br />of things I've <span>built</span>.
+        </h1>
+
+        <div class="dialog-box panel">
+            <div class="who">▶ NARRATOR</div>
+            <p>
+            <span
+                    class="typewriter"
+                    data-text="The quest board contains completed and current projects."
+            ></span
+            ><span class="type-cursor"></span>
+            </p>
+        </div>
+
+        <div class="scroll-hint">
+            <span class="arrow">▼</span> SCROLL TO CONTINUE
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="section-head">
+            <div class="eyebrow">◆ AREA 01</div>
+            <h2>QUEST BOARD</h2>
+        </div>
+
+        <div class="quest-list">
+            <article class="card quest-entry">
+                <div class="quest-info">
+                    <div class="card-top">
+                        <span class="lvl">LV. 01</span>
+                        <span class="flag">CLEARED</span>
+                    </div>
+                    <h3>OSRS Drop Roller</h3>
+                    <p>
+                        Simulates rolling for drops in the game "Old School Runescape".<br />
+                        Contains multiple sim types, as well as a comprehensive inventory.<br />
+                        Tracks drops over all sims and has a collection log.
+                    </p>
+                    <div class="card-foot">
+                        <span class="stackline">JAVASCRIPT · CSS · HTML</span>
+                        <a href="https://xasticarr.github.io/osrs_drops" class="go">ENTER ▸</a>
+                    </div>
+                </div>
+                <div class="quest-preview">
+                    <img src="images/osrs_drops_preview.png" alt="This is a preview image of the OSRS Drop Project">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- <div class="sub-eyebrow pixel">RESERVED SLOTS</div>
+
+    <div class="board">
+      <article
+        class="card locked"
+        tabindex="0"
+        role="button"
+        aria-label="Locked slot — reserved for a future project"
+      >
+        <div class="lock-icon">
+          <div class="shackle"></div>
+          <div class="body"></div>
+          <div class="hole"></div>
+        </div>
+        <div class="locked-label">LOCKED — LV. 02</div>
+        <div class="locked-sub">Unlocks when the next project ships.</div>
+      </article>
+
+      <article
+        class="card locked"
+        tabindex="0"
+        role="button"
+        aria-label="Locked slot — reserved for a future project"
+      >
+        <div class="lock-icon">
+          <div class="shackle"></div>
+          <div class="body"></div>
+          <div class="hole"></div>
+        </div>
+        <div class="locked-label">LOCKED — LV. 03</div>
+        <div class="locked-sub">Unlocks when the next project ships.</div>
+      </article>
+
+      <article
+        class="card locked"
+        tabindex="0"
+        role="button"
+        aria-label="Locked slot — reserved for a future project"
+      >
+        <div class="lock-icon">
+          <div class="shackle"></div>
+          <div class="body"></div>
+          <div class="hole"></div>
+        </div>
+        <div class="locked-label">LOCKED — LV. 04</div>
+        <div class="locked-sub">Unlocks when the next project ships.</div>
+      </article>
+    </div>
+  </section> -->
+
+    <section id="about" class="status-screen">
+        <div class="portrait-slot">
+            <img src="images/sean_rexford.jpg" alt="This is an image of Sean Rexford">
+        </div>
+        <div class="status-body">
+            <div class="player pixel">PLAYER: SEAN REXFORD</div>
+            <div class="class-line">CLASS: Full Stack Initiate</div>
+            <p>
+                I am a budding developer, as well as an experienced IT Analyst.
+                Currently studying JavaScript, Data Structures, and Algorithms.
+                I excel at communicating with others and critical thinking.
+            </p>
+            <!-- <p>Can put more here if I'd like</p> -->
+
+            <div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="save-point">
+        <div class="eyebrow">◆ AREA 02</div>
+        <h2>Game Saved!<br />Continue?</h2>
+        <a href="mailto:sprexford@gmail.com" class="btn">✉ EMAIL ME</a>
+        <div class="contact-links">
+            <a href="https://github.com/Xasticarr">GITHUB</a>
+            <a href="https://www.linkedin.com/in/seanrexford/">LINKEDIN</a>
+            <a href="#">RESUME</a>
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 — SEAN REXFORD</span>
+        <span>CONTINUES: <span class="heart">♥</span>∞</span>
+    </footer>
+</main>
+
+<script>
+    // typewriter effect for the dialog box
+    (function () {
+      const el = document.querySelector(".typewriter");
+      const cursor = document.querySelector(".type-cursor");
+      const text = el.getAttribute("data-text");
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      if (reduceMotion) {
+        el.textContent = text;
+        return;
+      }
+
+      let i = 0;
+      function type() {
+        if (i <= text.length) {
+          el.textContent = text.slice(0, i);
+          i++;
+          setTimeout(type, 18);
+        } else if (cursor) {
+          cursor.style.animationDuration = "0.9s";
+        }
+      }
+      type();
+    })();
+
+    // reveal quest cards on scroll
+    const cards = document.querySelectorAll(".card");
+    const cardObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add("in-view"), i * 70);
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    cards.forEach((c) => cardObserver.observe(c));
+
+    // fill stat bars on scroll into view
+    const bars = document.querySelectorAll(".stat-bar");
+    const barObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const bar = entry.target;
+            const level = parseInt(bar.getAttribute("data-level"), 10);
+            const segs = bar.querySelectorAll(".seg");
+            segs.forEach((seg, idx) => {
+              setTimeout(() => {
+                if (idx < level) seg.classList.add("lit");
+              }, idx * 60);
+            });
+            barObserver.unobserve(bar);
+          }
+        });
+      },
+      { threshold: 0.4 }
+    );
+    bars.forEach((b) => barObserver.observe(b));
+
+    // locked slot press feedback
+    document.querySelectorAll(".card.locked").forEach((card) => {
+      card.addEventListener("click", () => {
+        card.style.transition = "transform 0.08s steps(1)";
+        card.style.transform = "scale(0.97)";
+        setTimeout(() => (card.style.transform = ""), 120);
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          card.click();
+        }
+      });
+    });
+</script>
+</body>
+</html>
